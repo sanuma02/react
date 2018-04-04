@@ -87,7 +87,7 @@ An object can be as well bundled to be imported:
 import * as bundled from './utility.js'
 ```
 
-** Classes **
+**Classes**
 
 Inheritance
 ```
@@ -144,6 +144,81 @@ const dog = new Dog();
 dog.printGender()
 dog.printName()
 ```
+**Spread & Rest**
+
+Spread: used to copy values from an object 
+```
+const numbers = [1,2,3];
+const newNumbers = [...numbers, 4,5]
+console.log(newNumbers)
+
+const dog = {
+  name: "Rexy"
+};
+
+const newDog = {
+  ...dog,
+  age: 4
+};
+
+console.log(newDog)
+```
+
+Rest: used to maange n number or paramaters into an array
+```
+const filter = (...args) => {
+  return args.filter(el => el === 1)
+}
+console.log(filter(1,2,3))
+```
+**Destructuring**
+
+Used similar to a tuple assignation on Python:
+```
+const numbers = [1,2,3];
+[a,b] = numbers
+console.log(a,b)
+```
+It works also with objects
+
+**Reference and Primitive Types**
+
+Primitive types create copy of values when they are assign to a second value.
+Arrays and Object dont, they create a variable pointing to the original obcject, unless you actually copy all the object:
+
+```
+const person = {
+  name:"Max"
+};
+
+const secondPerson = {
+  ...person,
+  age:34
+};
+
+console.log(secondPerson)
+
+```
+
+**Remember JS Array Functions**
+
+```
+const numbers = [1,2,3]
+const doubleNum = numbers.map((num) =>{ return num * 2});
+console.log(doubleNum)
+```
+- map()
+- find()
+- findIndex()
+- filter()
+- reduce()
+- concat()
+- slice()
+- splice()
+
+
+
+
 
 
 
