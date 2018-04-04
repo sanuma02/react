@@ -87,6 +87,63 @@ An object can be as well bundled to be imported:
 import * as bundled from './utility.js'
 ```
 
+** Classes **
+
+Inheritance
+```
+class Animal {
+  
+  constructor(){
+    this.gender = "Male";
+  }
+  
+  printGender(){
+    console.log(this.gender);
+  }
+}
+
+class Dog extends Animal {
+  
+  constructor(){
+    super();
+    this.name = "Rexy";
+  }
+  printName(){
+    console.log(this.name);
+  }
+}
+
+const dog = new Dog();
+dog.printGender()
+dog.printName()
+```
+
+Next Generation JS syntax ES6/Babel:
+
+```
+class Animal {
+  
+
+  gender = "Male";
+
+  printGender = () => {
+    console.log(this.gender);
+  }
+}
+
+class Dog extends Animal {
+ 
+  name = "Rexy";
+
+  printName = () => {
+    console.log(this.name);
+  }
+}
+
+const dog = new Dog();
+dog.printGender()
+dog.printName()
+```
 
 
 
