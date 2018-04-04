@@ -46,6 +46,53 @@ Can be written as:
 const mult = number =>  number * 5
 ```
 
+**Modular Code**
+
+Exports and Imports are used to manage modular JS code
+Files can have several exports (const or functions), the keyword "default" especifies what code will be exported as default:
+
+file dog.js:
+```
+const dog = {
+name: 'Rexy'
+}
+export default dog
+```
+Then it can be imported as follows:
+
+file app.js
+```
+import dog from './dog.js'
+import dg from './dog.js'
+```
+On default export you can choose the name freely
+
+A regular export will look like this:
+
+file utility.js
+```
+export const clean = () => {...}
+export const baseData = 10 
+```
+So importing file will look like:
+
+file app.js
+```
+import dog from './dog.js'
+import dg from './dog.js'
+import {baseData} from './utility.js' or import {baseData as bD} from './utility.js'
+import {clean} from './utility.js' or import {clean as cl} from './utility.js'
+
+An object can be as well bundled to be imported:
+import * as bundled from './utility.js'
+```
+
+
+
+
+
+
+
 
 
 
