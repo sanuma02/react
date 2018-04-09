@@ -217,11 +217,33 @@ console.log(doubleNum)
 - splice()
 
 
+# render on React
 
+The following render code:
 
+```
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <p className="App-intro">
+          Just a nice p to start.
+        </p>
+      </div>
+    );
+  }
+}
+```
+It is equivalanrt to have:
+```
+class App extends Component {
+  render() {
+    return React.createElement('div',{className: 'App'}, React.createElement('p',null,'Just a nice p to start'));
+  }
+}
+```
 
-
-
+JSX code on first option looks like HTML but it is not, is actually Javascript code that is compiled. Some keywords reserved keywords on HTML can not be used on JSX like class, so className is used instead.
 
 
 
