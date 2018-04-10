@@ -245,6 +245,10 @@ class App extends Component {
 
 JSX code on first option looks like HTML but it is not, is actually Javascript code that is compiled. Some keywords reserved keywords on HTML can not be used on JSX like class, so className is used instead.
 
+** Events **
+
+Review https://reactjs.org/docs/events.html#supported-events 
+
 
 
 
