@@ -10,8 +10,19 @@ class App extends Component {
     ]
   }
 
-  switchNameHandler = () => {
-    console.log('Click happened')
+  switchNameHandler = (newName) => {
+    // console.log('Was clicked!');
+    // DON'T DO THIS: this.state.persons[0].name = 'Rexy';
+    this.setState( {
+      persons: [
+        { name: newName, age: 28 },
+        { name: 'Gigi', age: 29 },
+      ]
+    } )
+  }
+
+  nameChangedHandler = (event) => {
+
   }
 
   render() {
@@ -20,8 +31,8 @@ class App extends Component {
         <p className="App-intro">
           Just a nice p to start.
         </p>
-        <button onClick={this.switchNameHandler}>Switch Name</button>
-        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+        <button onClick={() => this.switchNameHandler('Rexy Jose!!')}>Switch Name</button>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler.bind(this, 'Rexy!')}/>
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>Hobbies: eat everything</Person>
       </div>
     );
