@@ -250,7 +250,11 @@ JSX code on first option looks like HTML but it is not, is actually Javascript c
 Review https://reactjs.org/docs/events.html#supported-events 
 
 
+# Components Functional (Stateless) and Class (Stateful) 
 
+On functional ones since it does not inherits from Component then state is not known, state is not used, functional components are simple, they render objects to the DOM but should not change the state of the application.
+
+Components that do change the state of an application are Class ones and often called containers
 
 
 
