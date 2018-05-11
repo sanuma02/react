@@ -31,13 +31,27 @@ class App extends Component {
 
   }
 
+  
+
+
   render() {
+
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid green',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
+
+
     return (
       <div className="App">
         <p className="App-intro">
           Just a nice p to start.
         </p>
-        <button onClick={() => this.switchNameHandler('Rexy Jose!!')}>Switch Name</button>
+        <button onClick={() => this.switchNameHandler('Rexy Jose!!')} style={style}>Switch Name</button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler.bind(this, 'Rexy!')}/>
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age} changed={this.nameChangedHandler} >Hobbies: eat everything</Person>
       </div>
