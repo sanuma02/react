@@ -18,6 +18,7 @@ const cockpit = (props) => {
 
 	return (
 		<div className={classes.Cockpit}>
+            <h1>{props.appTittle}</h1>
             <p className={assingedClasses.join(' ')}>
               Just a nice p to start.
             </p>

@@ -254,7 +254,11 @@ Review https://reactjs.org/docs/events.html#supported-events
 
 On functional ones since it does not inherits from Component then state is not known, state is not used, functional components are simple, they render objects to the DOM but should not change the state of the application.
 
-Components that do change the state of an application are Class ones and often called containers
+Components that do change the state of an application are Class ones and often called containers, components that do not change the state are function ones and are just called components.
+
+On Containers, the keyword "this" is used and on regular components state vars are passed via the props feature.
+
+Container can also access the props feature if needed, however the syntax to do so goes like this: this.props.someproperty
 
 
 
