@@ -245,7 +245,7 @@ class App extends Component {
 
 JSX code on first option looks like HTML but it is not, is actually Javascript code that is compiled. Some keywords reserved keywords on HTML can not be used on JSX like class, so className is used instead.
 
-** Events **
+**Events**
 
 Review https://reactjs.org/docs/events.html#supported-events 
 
@@ -259,6 +259,22 @@ Components that do change the state of an application are Class ones and often c
 On Containers, the keyword "this" is used and on regular components state vars are passed via the props feature.
 
 Container can also access the props feature if needed, however the syntax to do so goes like this: this.props.someproperty
+
+
+# Component Lifecycle - for Stateful Components -
+
+- constructor()
+- componentWillMount()
+- componentDidCatch()
+- render()
+- ...
+
+**Creation** 
+
+- constructor(props): Optional, must call the super(props) (Component parent method), inititialize the state, not for backend calls or reaching out to other pages.
+- componenetWillMount(): Legacy code, can be use to execute som optimization, not usually used.
+- render(): used to prepare and structure JSX code. -- Renders child components
+- componentDidMount(): not use to update state, calls to backend or pages can be done here
 
 
 
