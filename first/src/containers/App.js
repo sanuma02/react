@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit'
 
 
-class App extends Component {
+class App extends PureComponent {
 
   constructor(props){
     super(props);
@@ -54,10 +54,10 @@ class App extends Component {
     this.setState({showPersons: !toShow});
   }
 
-  shouldComponentUpdate(nextProps,nextState){
-    console.log("Should component update call!!!!!!!!! on App.js");
-    return true;
-  }
+  // shouldComponentUpdate(nextProps,nextState){
+  //   console.log("Should component update call!!!!!!!!! on App.js");
+  //   return true;
+  // }
 
 
   render() {

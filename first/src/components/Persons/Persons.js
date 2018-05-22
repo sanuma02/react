@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Person from './Person/Person';
 
 
-class Persons extends Component{
+class Persons extends PureComponent{
 
-    shouldComponentUpdate(nextProps,nextState){
-        console.log("Should component update call!!!!!!!!! on Persons.js");
-        return nextProps.persons !== this.props.persons;
-      }
+    // shouldComponentUpdate(nextProps,nextState){
+    //     console.log("Should component update call!!!!!!!!! on Persons.js");
+    //     return nextProps.persons !== this.props.persons;
+    //   } this method is built in on PureComponents: checking that the state and props really changed
 
 
     render(){
