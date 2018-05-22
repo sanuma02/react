@@ -276,6 +276,8 @@ Container can also access the props feature if needed, however the syntax to do 
 - render(): used to prepare and structure JSX code. -- Renders child components
 - componentDidMount(): not use to update state, calls to backend or pages can be done here
 
+Everytime the state is changed, the render method of its component is called again.
+
 
 
 

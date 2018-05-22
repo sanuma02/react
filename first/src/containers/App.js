@@ -4,6 +4,21 @@ import Cockpit from '../components/Cockpit/Cockpit'
 
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    console.log('[App.js] Inside Constructor', props);
+    //state could be setup here
+  }
+
+  componentWillMount(){
+    console.log('[App.js] Inside componentWillMount call');
+  }
+
+  componentDidMount(){
+    console.log('[App.js] Inside componentDidMount call');
+  }
+
   state = {
     persons: [
       {id:'1',name:'Rex',age:5},
@@ -39,10 +54,14 @@ class App extends Component {
     this.setState({showPersons: !toShow});
   }
 
-  
+  shouldComponentUpdate(nextProps,nextState){
+    console.log("Should component update call!!!!!!!!! on App.js");
+    return true;
+  }
 
 
   render() {
+    console.log('[App.js] inside of render')
 
     let persons = null;
    
@@ -63,6 +82,7 @@ class App extends Component {
 
     return (
         <div>
+          <button onClick={() => {this.setState({showPersons: true})}}> Show Persons </button>
           <Cockpit clicked={this.togglePersonsHandler} persons = {this.state.persons} appTittle={this.props.tittle}/>
           {persons}
         </div>
